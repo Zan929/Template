@@ -1,0 +1,111 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  /*background-color: antiquewhite;*/
+  background-image: url("../img/Rectangle 1.jpg");
+  background-size: cover;
+  margin: 0%;
+  min-height: 100v;
+  color: white;
+}
+
+body > header {
+  border: 2px dashed red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body > header nav {
+  border: 2px dashed blue;
+  position: relative;
+  min-height: 48px;
+}
+
+body > header nav #toggler {
+  display: none;
+}
+
+body > header label {
+  border: 2px dashed orange;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+body > header label div {
+  background-color: antiquewhite;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  height: 10%;
+}
+
+body > header label div:nth-child(1) {
+  top: 17.5%;
+}
+
+body > header label div:nth-child(2) {
+  top: 45%;
+}
+
+body > header label div:nth-child(3) {
+  top: 72.5%;
+}
+
+body > header ul {
+  display: none;
+  border: 2px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  margin: 0;
+}
+
+body > header #toggler:checked ~ ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body > header #toggler:checked ~ label {
+  border-color: aqua;
+}
+
+body > header #toggler:checked ~ label div:nth-child(1) {
+  -webkit-transform: roate(-135deg);
+          transform: roate(-135deg);
+  top: 45%;
+}
+
+body > header #toggler:checked ~ label div:nth-child(2) {
+  opacity: 0;
+}
+
+body > header #toggler:checked ~ label div:nth-child(3) {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 45%;
+}
+
+@media (min-width: 768px) {
+  body > header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=style.css.map */
