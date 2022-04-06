@@ -14,6 +14,7 @@ body {
 
 body > header {
   border: 2px dashed red;
+  padding: 1em 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,8 +23,32 @@ body > header {
           justify-content: space-between;
 }
 
+body > header > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > header .pageLogo {
+  border: 2px dashed red;
+}
+
+body > header .pageLogo a {
+  color: inherit;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body > header .pageLogo a b {
+  font-size: 30px;
+}
+
 body > header nav {
-  border: 2px dashed blue;
   position: relative;
   min-height: 48px;
 }
@@ -43,7 +68,10 @@ body > header label {
 }
 
 body > header label div {
+  -webkit-transition: .5s;
+  transition: .5s;
   background-color: antiquewhite;
+  border-radius: 5px;
   position: absolute;
   width: 80%;
   left: 10%;
@@ -63,8 +91,12 @@ body > header label div:nth-child(3) {
 }
 
 body > header ul {
+  border: 2px dashed blue;
+  background-color: orange;
+  border-radius: 10px;
+  padding: 0 .7em;
+  list-style: none;
   display: none;
-  border: 2px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -73,6 +105,22 @@ body > header ul {
   right: 0;
   top: 48px;
   margin: 0;
+}
+
+body > header ul li {
+  padding: .7em .7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body > header ul li a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
 }
 
 body > header #toggler:checked ~ ul {
@@ -86,8 +134,8 @@ body > header #toggler:checked ~ label {
 }
 
 body > header #toggler:checked ~ label div:nth-child(1) {
-  -webkit-transform: roate(-135deg);
-          transform: roate(-135deg);
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
   top: 45%;
 }
 
@@ -102,10 +150,18 @@ body > header #toggler:checked ~ label div:nth-child(3) {
 }
 
 @media (min-width: 768px) {
-  body > header nav ul {
+  body > header label {
+    display: none;
+  }
+  body > header ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: static;
   }
 }
 /*# sourceMappingURL=style.css.map */
